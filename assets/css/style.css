@@ -11,6 +11,7 @@
     --ghost-white: hsl(230, 60%, 98%);
     --light-gray: hsl(0, 0%, 80%);
     --slate-gray: hsl(225, 8%, 48%);
+    --lightlightgray: hsl(227, 27%, 94%);
     --cool-gray: hsl(225, 11%, 59%);
     --gainsboro: hsl(217, 16%, 90%);
     --mustard: hsl(47, 100%, 69%);
@@ -338,7 +339,7 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  background-color: var(--raisin-black-2);
+  background-color: var(--majorelle-blue);
   color: var(--white);
   max-width: 300px;
   width: 100%;
@@ -373,7 +374,7 @@ body {
 
 .nav-close-btn:is(:hover, :focus) { color: var(--bittersweet); }
 
-.navbar-item:not(:last-child) { border-block-end: 1px solid var(--jet); }
+.navbar-item:not(:last-child) { border-block-end: 1px solid var(--white); }
 
 .navbar-link {
   font-size: var(--fs-9);
@@ -405,7 +406,6 @@ body {
 / --------------------------------- */
 .hero { 
   background-color: var(--ghost-white);
-  /* background-color: #3be3ee; */
   padding-block-start: calc(var(--section-padding) + 60px); 
 }
 
@@ -417,6 +417,10 @@ body {
 .hero-text {
   font-size: var(--fs-7);
   margin-block: 30px 35px;
+  color: #fff;
+  background-color: var(--mustard);
+  padding: 30px 15px;
+  border-radius: 20px;
 }
 
 .hero-content :is(.wrapper, .hero-btn) {
@@ -425,7 +429,11 @@ body {
 }
 
 .hero-content .h1 {
-  font-size: 4.5rem;
+  font-size: 4rem;
+  background-color: var(--majorelle-blue);
+  color: var(--white);
+  padding: 30px 15px;
+  border-radius: 20px;
 }
 
 .hero-content .wrapper {
@@ -475,10 +483,18 @@ body {
 / --------------------------------- */
 .about {
   padding-block-start: 40px;
+  background: var(--sky-blue-crayola);
+  color: var(--white);
+  /* color: var(--raisin-black-1); */
 }
 
 .about .h2.section-title {
   margin-bottom: 3rem;
+  color: var(--white);
+}
+
+.about .section-subtitle {
+  color: var(--white);
 }
 
 .about .feature-card .card-icon {
@@ -487,6 +503,8 @@ body {
 
 .about .feature-card .h3.card-title {
   margin-bottom: 1rem;
+  color: var(--white);
+  font-weight: bold;
 }
 
 /* .about-image {
@@ -512,7 +530,11 @@ body {
 /* --------------------------------- /
 #SERVICES
 / --------------------------------- */
-.service { background-color: var(--ghost-white); }
+.service { background-color: var(--lightlightgray); }
+
+.service .section-subtitle {
+  color: var(--raisin-black-1);
+}
 
 .service-card,
 .service .link-card {
@@ -539,7 +561,7 @@ body {
   max-width: max-content;
   padding: 15px;
   border-radius: var(--radius-8);
-  background-color: hsla(var(--color), 0.7);
+  background-color: hsla(var(--color));
   margin-block-end: 25px;
   transition: var(--transition-2);
 }
@@ -648,7 +670,7 @@ body {
 /* --------------------------------- /
 #PROJECTS
 / --------------------------------- */
-.project { background-color: var(--ghost-white); }
+/* .project { background-color: var(--ghost-white); }
 
 .project .section-title { margin-block: 20px 60px; }
 
@@ -714,7 +736,7 @@ body {
 .project-card:is(:hover, :focus-within) .card-content {
   opacity: 1;
   transform: translateY(-50%);
-}
+} */
 
 /* --------------------------------- /
 #NEWSLETTER
@@ -766,7 +788,8 @@ body {
 }
 
 .contact-form {
-  background-color: var(--white-1);
+  /* background-color: var(--white-1); */
+  background: linear-gradient(45deg, #3494e6, #ec6ead);
   padding: 40px 30px;
   border-radius: 10px;
   margin-block-end: 30px;
@@ -812,7 +835,9 @@ textarea.input-field {
 .contact-item { min-width: 100%; }
 
 .contact-card {
-  background-color: var(--white-1);
+  /* background-color: var(--white-1); */
+  background: linear-gradient(45deg, #3494e6, #ec6ead);
+  color: white;
   padding: 20px;
   border-radius: 10px;
   box-shadow: var(--shadow-1);
@@ -1354,7 +1379,6 @@ textarea.input-field {
 
   .hero {
     background-image: linear-gradient(to right, var(--ghost-white) 79%, var(--mustard) 79%);
-    /* background-image: linear-gradient(to right, #3be3ee 79%, var(--mustard) 79%); */
     overflow: hidden;
   }
 
